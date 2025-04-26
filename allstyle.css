@@ -1,0 +1,154 @@
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(88, 72, 78, 0.8);
+    z-index: 999;
+    box-sizing: border-box;
+}
+  
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+}
+  
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+  
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+  
+@media (max-width: 700px) {
+  .sticky-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-right: 0%;
+    gap: 5px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .sticky-header img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+}
+
+body {
+    margin-top: 80px; /* Adjust value to match header height */
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+}  
+
+.graypink {
+    background: rgb(52, 52, 52);
+    color:rgb(249, 160, 213);
+}
+
+.graypink a {
+    color:rgb(214, 57, 151);
+}
+
+.graypink a:hover {
+    color:rgb(247, 143, 205);
+}
+
+.purplegold {
+    background: rgb(76, 7, 63);
+    color:rgb(244, 249, 160);
+}
+
+.purplegold a {
+    color:rgb(214, 211, 57);
+}
+
+.purplegold a:hover {
+    color:rgb(255, 253, 147);
+}
+
+.hell {
+    background: rgb(78, 21, 21);
+    color:rgb(223, 144, 98);
+}
+
+.hell a {
+    color:rgb(255, 51, 0);
+}
+
+.hell a:hover {
+    color:rgb(255, 142, 114);
+}
+
+.green {
+    background: rgb(21, 78, 24);
+    color:rgb(106, 223, 98);
+}
+
+.green a {
+    color:rgb(1, 202, 168);
+}
+
+.green a:hover {
+    color:rgb(153, 255, 238);
+}
+
+.dumb {
+    background-image: url('types/82iq.png');
+    background-size: 60%;
+    color:rgb(144, 144, 222);
+}
+
+.dumb a {
+    color:rgb(1, 202, 168);
+}
+
+.dumb a:hover {
+    color:rgb(153, 255, 238);
+}
+
+.shitandpiss {
+    background: rgb(51, 26, 0);
+    color:rgb(221, 223, 98);
+}
+
+.shitandpiss a {
+    color:rgb(214, 211, 57);
+}
+
+.shitandpiss a:hover {
+    color:rgb(255, 253, 147);
+}
