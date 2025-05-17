@@ -1,0 +1,28 @@
+body {
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+}
+
+body a {
+    font-size: 150%;
+}
+
+img {
+    width: 700px;
+    height: auto;
+    margin-top: 10px;
+    display: block;
+}
+
+.graypink {
+    background: rgb(52, 52, 52);
+    color:rgb(249, 160, 213);
+}
+
+.graypink a {
+    color:rgb(214, 57, 151);
+}
+
+.graypink a:hover {
+    color:rgb(247, 143, 205);
+}
