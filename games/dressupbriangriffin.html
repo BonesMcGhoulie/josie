@@ -1,0 +1,61 @@
+<html>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Queso's Arcade</title>
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="stylesheet" href="quesosarcade.css">
+    <script src="ruffle.js"></script>
+
+    <header class="sticky-header">
+        <h1 class="heading">Queso's Arcade</h1>
+        <nav class="nav-links">
+          <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <body class="arcade">
+
+        <audio controls autoplay>
+            <source src="../audio/rainbowtylenol.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+        <hr />
+
+        <p>Welcome to Queso's Arcade! More games will be added in the future!</p>
+
+        <div class="layout">
+        
+            <div class="links">
+                <ul>
+                    <a href="digdig.html">digdig.io</a>
+                    <a href="dressupbriangriffin.html">Dress Up Brian Griffin</a>
+                    <a href="sushicat2.html">Sushi Cat 2</a>
+                    <a href="quesosarcade.html">Tetris</a>
+                </ul>
+            </div>
+
+            <div class="game">
+                <object type="application/x-shockwave-flash" data="dressupbriangriffin.swf" width="800" height="600">
+                    <param name="movie" value="dressupbriangriffin.swf" />
+                </object>
+            </div>
+
+            <img src="queso.png" class="queso">
+        </div>
+
+        </div>
+
+        <script>
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.addEventListener("load", () => {
+            const ruffle = window.RufflePlayer.newest();
+            const elements = document.querySelectorAll("object");
+            for (const el of elements) {
+                ruffle.createPlayer().load(el);
+            }
+            });
+        </script>
+
+    </body>
+
+</html>

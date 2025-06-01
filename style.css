@@ -1,10 +1,18 @@
 body {
     font-family: 'Comic Sans MS';
     font-size: 90%;
+    position: relative;
 }
 
 body a {
     font-size: 150%;
+}
+
+.queso {
+  position: absolute;
+  top: 20px; /* adjust as needed */
+  right: 20px; /* adjust as needed */
+  z-index: 1000; /* ensures it's above other content */
 }
 
 body .clips{
@@ -25,8 +33,7 @@ body .clips{
 
 .image {
     position: absolute;
-    right: 0;
-    left: 120%;
+    right: 60px;
     margin-left: -45vw;
     margin-top: -60px;
     transform: translateX(-50%)
@@ -36,7 +43,7 @@ body .clips{
     border-radius: 30px;
 }
 
-@media (max-aspect-ratio: 10/9) {
+@media (max-aspect-ratio: 4/3) {
     .container {
       flex-direction: column;
       align-items: center;
@@ -50,6 +57,20 @@ body .clips{
     .image {
         position: static;
         margin: 20px 0;
+        transform: none;
+    }
+
+    .queso {
+        position: static;
+        transform: none;
+    }
+}
+
+@media (max-aspect-ratio: 15/9) {
+
+    .image {
+        position: static;
+        margin: 60px 20px;
         transform: none;
     }
 }
