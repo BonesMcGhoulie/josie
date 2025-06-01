@@ -36,7 +36,7 @@
     white-space: nowrap;
 }
   
-@media (max-width: 700px) {
+@media (max-aspect-ratio: 10/9) {
   .sticky-header {
     flex-direction: column;
     align-items: center;
@@ -66,6 +66,10 @@
     margin-top: 10px;
   }
 
+  body {
+    padding-top: 80px;
+  }
+
 }
 
 body {
@@ -73,6 +77,15 @@ body {
     font-family: 'Comic Sans MS';
     font-size: 90%;
 }  
+
+body .clips{
+  margin-left: 30px;
+}
+
+img {
+  height: 209px;
+  width: 372px;
+}
 
 .graypink {
     background: rgb(52, 52, 52);
