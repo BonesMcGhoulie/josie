@@ -14,7 +14,8 @@
   </header>
 
     <body class="hell">
-        <audio controls autoplay>
+        <p>RAGESIE.</p>
+        <audio controls autoplay loop id="audio">
             <source src="../audio/hairdunnailsdun.ogg" type="audio/ogg">
           Your browser does not support the audio element.
         </audio>
@@ -1223,5 +1224,10 @@
         </footer>
 
     </body>
+
+    <script>
+        var audio = document.getElementById("audio");
+        audio.volume = 0.25; // Set volume to 50%
+    </script>
 
 </html>

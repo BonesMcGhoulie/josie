@@ -15,7 +15,7 @@
 
     <body class="arcade">
 
-        <audio controls autoplay>
+        <audio controls autoplay loop id="audio">
             <source src="../audio/rainbowtylenol.ogg" type="audio/ogg">
           Your browser does not support the audio element.
         </audio>
@@ -40,8 +40,11 @@
 
             <img src="queso.png" class="queso">
         </div>
-
-        </div>
+        
+        <script>
+            var audio = document.getElementById("audio");
+            audio.volume = 0.25; // Set volume to 50%
+        </script>
 
         <script>
             window.RufflePlayer = window.RufflePlayer || {};

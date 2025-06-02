@@ -15,7 +15,7 @@
 
     <body class="green">
         <p>Clips of Josie saying words funny.</p>
-        <audio controls autoplay>
+        <audio controls autoplay loop id="audio">
             <source src="../audio/selfishmelody.ogg" type="audio/ogg">
           Your browser does not support the audio element.
         </audio>
@@ -909,5 +909,10 @@
         </footer>
 
     </body>
+
+    <script>
+        var audio = document.getElementById("audio");
+        audio.volume = 0.25; // Set volume to 50%
+    </script>
 
 </html>

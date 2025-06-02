@@ -15,7 +15,7 @@
     
     <body class="graypink">
         <p>Every game that Josie has played on stream! Click on a game and it will show a list of links to streams she's played that game on!</p>
-        <audio controls autoplay>
+        <audio controls autoplay loop id="audio">
             <source src="../audio/freedomdive.ogg" type="audio/ogg">
           Your browser does not support the audio element.
         </audio>
@@ -1799,6 +1799,11 @@
         </footer>
 
     </body>
+
+    <script>
+        var audio = document.getElementById("audio");
+        audio.volume = 0.25; // Set volume to 50%
+    </script>
 
     <script>
     function toggleDropdown(element) {

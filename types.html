@@ -10,6 +10,11 @@
     </head>
     
     <body class="graypink">
+        <audio controls autoplay loop id="audio">
+            <source src="audio/bewarethefriendlystranger.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+
         <hr />
         <ul>
             <li><a href="types/rage.html">Rage Clips</a></li>
@@ -17,5 +22,10 @@
             <li><a href="types/speech.html">Speech</a></li>
         </ul>
     </body>
+
+    <script>
+        var audio = document.getElementById("audio");
+        audio.volume = 0.25; // Set volume to 50%
+    </script>
     
 </html>

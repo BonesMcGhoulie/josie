@@ -11,12 +11,18 @@
     <body class="graypink">
         <hr />
 
-        <audio controls autoplay>
+        <audio controls autoplay loop id="audio">
             <source src="audio/spanishflea.ogg" type="audio/ogg">
           Your browser does not support the audio element.
         </audio>
 
+        <img src="images/wip.gif">
         <img src="images/lurksie.jpg">
     </body>
+
+    <script>
+        var audio = document.getElementById("audio");
+        audio.volume = 0.25; // Set volume to 50%
+    </script>
 
 </html>
