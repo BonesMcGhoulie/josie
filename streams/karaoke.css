@@ -234,4 +234,13 @@ input[type="text"] {
         margin: 60px 20px;
         transform: none;
     }
+
+    .dropdown-content {
+        display: none;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        width: 300px !important; /* or a fixed width if you prefer */
+        margin-top: 10px;
+    }
 }
