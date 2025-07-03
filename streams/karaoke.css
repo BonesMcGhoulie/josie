@@ -1,0 +1,228 @@
+/* === BASE LAYOUT === */
+body {
+    margin-top: 80px; /* matches header height */
+    margin-bottom: 60px; /* matches footer height */
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(88, 72, 78, 0.8);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: rgb(247, 143, 205);
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(88, 72, 78, 0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-link {
+    color: rgb(214, 57, 151);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: rgb(247, 143, 205);
+}
+
+/* === DROPDOWNS === */
+.dropdown {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    z-index: 5; /* so dropdowns sit above gif */
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    z-index: 10;
+    background-color: #130b3c;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 1000px;
+    margin-top: 10px;
+}
+
+.dropdown-content.show {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.grid-item img {
+    border-radius: 6px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: auto;
+}
+
+/* === FIXED GIF === */
+.image {
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* spacing between gifs */
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;  /* optional: cap size */
+    height: auto;
+}
+
+
+/* === INPUT FIELD === */
+input[type="text"] {
+    padding: 8px;
+    margin: 20px;
+    font-size: 16px;
+    width: 300px;
+}
+
+/* === COLOR THEME === */
+.graypink {
+    background: rgb(32, 1, 106);
+    color: rgb(0, 221, 255);
+}
+
+.graypink a {
+    color: rgb(0, 221, 255);
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.graypink a:hover {
+    color: rgb(156, 242, 255);
+}
+
+/* === RESPONSIVE MEDIA QUERY === */
+@media (max-aspect-ratio: 10/9) {
+    .sticky-header,
+    .sticky-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    body {
+        padding-top: 50px;
+    }
+
+    .nav-links,
+    .sticky-footer .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-right: 0%;
+        gap: 5px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .sticky-header img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .image {
+        position: static; /* Allow gif to flow in document order */
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+        z-index: auto;
+        pointer-events: auto; /* Re-enable interactivity if needed */
+    }
+
+    .image img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 20px;
+    }
+}
+
+@media (max-aspect-ratio: 15/9) {
+
+    .image {
+        position: static;
+        margin: 60px 20px;
+        transform: none;
+    }
+}
