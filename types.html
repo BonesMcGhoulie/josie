@@ -3,11 +3,17 @@
     <head>
         <title>Types of Clips</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="clipsstyle.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <h1>Types of Clips</h1>
-        <p><a href="index.html">Home</a></p>
     </head>
+
+    <header class="sticky-header">
+        <h1 class="heading">Types of Clips</h1>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="random.html" target="_blank">Random Clip</a>
+        </nav>
+    </header>
     
     <body class="graypink">
         <audio controls autoplay loop id="audio">
@@ -16,11 +22,15 @@
         </audio>
 
         <hr />
-        <ul>
-            <li><a href="types/rage.html">Rage Clips</a></li>
-            <li><a href="types/shutup.html">"Shut Up"</a></li>
-            <li><a href="types/speech.html">Speech</a></li>
-        </ul>
+        <div class="typeslist">
+            <ul>
+                <li><a href="types/rage.html">Rage Clips</a></li>
+                <li><a href="types/shutup.html">"Shut Up"</a></li>
+                <li><a href="types/speech.html">Speech</a></li>
+            </ul>
+        </div>
+
+        <img src="images/bugsie.png">
     </body>
 
     <script>

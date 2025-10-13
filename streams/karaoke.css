@@ -16,7 +16,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: rgba(88, 72, 78, 0.8);
+    background-color: rgba(78, 72, 105, 0.95);
     z-index: 999;
     box-sizing: border-box;
 }
@@ -44,7 +44,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: rgb(247, 143, 205);
+    color: rgb(255, 255, 255);
 }
 
 /* === FOOTER === */
@@ -67,15 +67,10 @@ body {
 }
 
 .footer-link {
-    color: rgb(214, 57, 151);
     font-weight: bold;
     font-style: italic;
     font-size: 16px;
     text-decoration: none;
-}
-
-.footer-link:hover {
-    color: rgb(247, 143, 205);
 }
 
 /* === DROPDOWNS === */
@@ -165,82 +160,817 @@ input[type="text"] {
     color: rgb(156, 242, 255);
 }
 
-/* === RESPONSIVE MEDIA QUERY === */
-@media (max-aspect-ratio: 10/9) {
-    .sticky-header,
-    .sticky-footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+/* === MOBILE HEADER FIX (STACKED & COMPACT, HOME ABOVE SORT) === */
+@media screen and (max-width: 1000px) {
+  .sticky-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 10px !important;
+    gap: 6px !important;
+    background-color: rgba(78, 72, 105, 0.95) !important;
+    text-align: center !important;
+  }
 
-    .heading {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
+  .heading {
+    font-size: 20px !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+    color: rgb(0, 221, 255) !important;
+  }
 
-    body {
-        padding-top: 50px;
-    }
+  .nav-links {
+    display: flex !important;
+    flex-direction: column !important; /* stack vertically */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important; /* tighter vertical spacing */
+    margin: 0 !important;
+  }
 
-    .nav-links,
-    .sticky-footer .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin-right: 0%;
-        gap: 5px;
-    }
+  .nav-links a {
+    font-size: 15px !important;
+    padding: 2px 6px !important;
+    white-space: nowrap !important;
+  }
 
-    .nav-links a {
-        font-size: 14px;
-    }
+  body {
+    margin-top: 95px !important; /* keeps content clear of header */
+  }
 
-    .sticky-header img {
-        max-width: 100%;
-        height: auto;
-        margin-top: 10px;
-    }
-
-    .image {
-        position: static; /* Allow gif to flow in document order */
-        width: 100%;
-        margin: 20px auto;
-        text-align: center;
-        z-index: auto;
-        pointer-events: auto; /* Re-enable interactivity if needed */
-    }
-
-    .image img {
-        max-width: 90%;
-        height: auto;
-        border-radius: 20px;
-    }
-    
-    .dropdown-content {
-        display: none;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        width: 300px !important; /* or a fixed width if you prefer */
-        margin-top: 10px;
-    }
+  /* make sure first paragraph/audio isn’t hidden */
+  body.graypink p:first-of-type,
+  body.graypink audio:first-of-type {
+    margin-top: 10px !important;
+  }
 }
 
-@media (max-aspect-ratio: 15/9) {
 
+
+    body {
+        margin:0 auto;
+        max-width:970px;
+    }
+    .graypink {
+        position: relative;
+    }
+    .graypink a {
+        color: white;
+    }
+    .graypink:before {
+        content:"";
+        background:rgba(142, 82, 126, .6);
+        width:100%;
+        height:100%;
+        position:absolute;
+        z-index:-1;
+        max-width:970px;
+    }
+    h1 {
+        text-shadow:1px 1px black;
+    }
+    h2 {
+        background:rgba(255,60,150,.5);
+        color: pink;
+        padding:4px;
+        border:6px double pink;
+        border-left: 0;
+        border-right: 0;
+        margin:0;
+    }
+    h2:first-of-type {
+        border-top:0;
+    }
+    h3 {
+        padding-left:8px
+    }
+    h5 {
+        padding-left: 8px
+    }
+    .queso {
+        position:absolute;
+    }
+    .container {
+        display:inline-block;
+        width:100%;
+        margin-left:8px;
+        margin-top:10px
+    }
+    .container hr {
+        display:none
+    }
+    .text {
+        float:left;
+        margin-right:20px;
+        background: #852c53;
+        border: 6px double pink;
+        width:330px;
+        color:black;
+    }
+    .text ul {
+        list-style: none;
+        padding:0;
+    }
+    .text ul a {
+        color: #000
+    }
     .image {
-        position: static;
-        margin: 60px 20px;
+        right:20px;
+        margin-top:0;
         transform: none;
     }
-
-    .dropdown-content {
-        display: none;
-        padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        width: 300px !important; /* or a fixed width if you prefer */
-        margin-top: 10px;
+    input[type="text"] {
+        background: rgba(255, 60, 150, .5);
+        color: white;
+        padding: 4px;
+        outline: 3px double pink;
+        border: none;
+        font-family:inherit;
+        position:relative;
+        z-index:1;
     }
+    input[type="text"]:focus {
+        outline-color: #3a7fd4
+    }
+    input[type="text"]::placeholder {
+        color: white;
+    }
+    .graypink a.dropbtn {
+        background: rgba(255, 60, 150, .5);
+        color: white;
+        padding: 4px;
+        border: 3px double pink;
+        font-weight:bold;
+    }
+    .graypink a.dropbtn:focus {
+        border-color: #3a7fd4
+    }
+    .grid-item {
+        margin-bottom: 0;
+    }
+    .grid-item a {
+        padding:10px 0;
+        width:100%;
+    }
+    .dropdown-content.show {
+        width:928px;
+        grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+        margin-left:8px;
+        border-radius:0;
+        box-shadow: none;
+        border:3px inset pink;
+        position:relative;
+        background: #310b3c
+    }
+    .dropdown-content.show::before {
+        content:"";
+        position: absolute;
+        margin-left: -1px;
+        top: -9px;
+        right: 120px;
+        display: inline-block;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 9px solid #ab8188;
+    }
+    body {
+        margin-top: 85px;
+    }
+    body .clips {
+        margin:0 8px
+    }
+    body > p {
+        padding:6px 8px 0 8px;
+    }
+    h1 {
+        background: transparent
+    }
+    .queso {
+        right:0;
+        top:0;
+        z-index:255456789
+    }
+
+    .graypink:before {
+        background:rgba(82, 126, 148, .6)
+    }
+    .graypink a.dropbtn {
+        background:rgba(60, 150, 255, .5);
+        border-color:#00d9ff;
+    }
+    .dropdown-content.show {
+        border-color: #00d9ff;
+        background:#050583;
+        max-width: 800px;
+        margin-top:15px;
+    }
+    .dropdown-content.show::before {
+        border-bottom-color: #0091ab;
+        left:20px;
+        right:auto;
+    }
+    .sticky-header {
+        background-color:rgba(78, 72, 105, 0.8)
+    }
+
+    /* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(32, 1, 106);
+    color: rgb(0, 221, 255);
+}
+
+/* Remove old box and centering constraints */
+.graypink {
+    background: none;
+    color: rgb(0, 221, 255);
+    position: static;
+}
+
+.graypink:before {
+    display: none;
+}
+
+/* Move content left */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+/* Adjust paragraph and tracklist text */
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.topblokelist {
+    margin-top: 10px;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(78, 72, 105, 0.8);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(78, 72, 105, 0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.footer-link {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* === IMAGES === */
+.image {
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;
+    height: auto;
+}
+
+/* === DROPDOWN CONTENT === */
+.dropdown-content.show {
+    width: 900px;
+    grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+    margin-left: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 3px inset rgb(0, 221, 255);
+    background: #050583;
+}
+
+.dropdown-content.show::before {
+    border-bottom-color: #0091ab;
+    left: 20px;
+    right: auto;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(32, 1, 106);
+    color: rgb(0, 221, 255);
+}
+
+/* Keep the graypink theme with background */
+.graypink {
+    background: rgba(82, 126, 148, 0.6);
+    color: rgb(0, 221, 255);
+    position: relative;
+}
+
+/* Remove the box overlay, just keep the color */
+.graypink:before {
+    display: none;
+}
+
+/* Add spacing under header to prevent overlap */
+body {
+    margin-top: 120px; /* Adjusted from 85px to push content down */
+}
+
+/* Move content slightly left */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+/* Paragraph styling */
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(78, 72, 105, 0.9);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 26px;
+    margin: 8px;
+    flex-grow: 1;
+    color: rgb(0, 221, 255);
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(78, 72, 105, 0.9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.footer-link {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* === IMAGES === */
+.image {
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;
+    height: auto;
+}
+
+/* === DROPDOWN CONTENT === */
+.dropdown-content.show {
+    width: 900px;
+    grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+    margin-left: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 3px inset rgb(0, 221, 255);
+    background: #050583;
+}
+
+.dropdown-content.show::before {
+    border-bottom-color: #0091ab;
+    left: 20px;
+    right: auto;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: linear-gradient(180deg, rgb(32, 1, 106) 0%, rgb(50, 10, 140) 100%);
+    color: rgb(0, 221, 255);
+    margin-top: 120px; /* prevent overlap from header */
+}
+
+/* === COLOR THEME === */
+.graypink {
+    background: rgba(32, 1, 106, 0.85);
+    color: rgb(0, 221, 255);
+    position: relative;
+}
+
+.graypink:before {
+    display: none;
+}
+
+/* Keep left alignment and spacing */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(32, 1, 106); /* Original deep purple-blue background */
+    color: rgb(0, 221, 255);
+    margin-top: 120px; /* Prevent header overlap */
+}
+
+/* === COLOR THEME === */
+.graypink {
+    background: rgb(32, 1, 106); /* Keep original solid background */
+    color: rgb(0, 221, 255);
+    position: relative;
+}
+
+.graypink:before {
+    display: none; /* remove overlay box */
+}
+
+.graypink a {
+    color: rgb(0, 221, 255);
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.graypink a:hover {
+    color: rgb(156, 242, 255);
+}
+
+/* Shift all top content to the left */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(78, 72, 105, 0.95); /* original purple-gray */
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+    color: rgb(0, 221, 255);
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(78, 72, 105, 0.95); /* original footer color */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.footer-link {
+    color: rgb(214, 57, 151);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* === IMAGES === */
+.image {
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;
+    height: auto;
+}
+
+/* === DROPDOWN CONTENT === */
+.dropdown-content.show {
+    width: 928px;
+    grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+    margin-left: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 3px inset pink;
+    background: #310b3c; /* original dropdown background */
+}
+
+.dropdown-content.show::before {
+    border-bottom-color: #ab8188;
+    left: 20px;
+    right: auto;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(32, 1, 106);
+    color: rgb(0, 221, 255);
+    margin-top: 90px; /* was 120px — moved closer to header */
+}
+
+/* Keep left alignment and spacing */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 5px; /* was 10px — tighter gap below header */
+}
+
+/* === Prevent footer overlap === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(32, 1, 106);
+    color: rgb(0, 221, 255);
+    margin-top: 90px; /* for spacing under header */
+    padding-bottom: 80px; /* NEW: makes sure last song isn't hidden behind footer */
+}
+
+
+/* === Tracklist Wrapping Fix for All Screen Sizes === */
+.topblokelist {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin: 10px 0 0 40px;
+    padding: 0;
+}
+
+.topblokelist li {
+    display: list-item;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    white-space: normal; /* allow line breaks */
+    overflow-wrap: break-word; /* wraps long words */
+    word-break: break-word; /* ensures break inside long names */
+}
+
+/* Allow links to stretch and wrap correctly */
+.topblokelist li a {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal; /* fixes wrapping inside links */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* === RESPONSIVE FIX: prevent GIFs from overlapping === */
+@media screen and (max-width: 1350px) {
+  .image {
+    position: static !important;        /* remove fixed positioning */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto 60px auto;       /* add space around GIFs */
+    width: 100%;
+    max-width: 500px;                  /* prevents them from being too large */
+  }
+
+  .image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  /* optional: center the audio/text when GIFs move below */
+  body.graypink p,
+  body.graypink audio,
+  body.graypink hr,
+  body.graypink .topblokelist {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* === MATCH HEADER PROPORTIONS TO CLIPSSTYLE.CSS === */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* identical padding */
+  box-sizing: border-box;
+  z-index: 999;
+  line-height: 1.1;
+}
+
+.heading {
+  font-size: 24px; /* same heading size */
+  margin: 8px;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px;
+  margin-right: 10%;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* increased from 16px to match clips header */
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap;
+  text-shadow: 1px 1px black;
+  background: transparent;
+}
+/* === MOBILE DROPDOWN BOX FIX (CENTERED & CONTAINED) === */
+@media screen and (max-width: 1000px) {
+  .dropdown-content.show {
+    width: 90% !important;                 /* don’t stretch full width */
+    max-width: 500px !important;           /* cap size for readability */
+  }
+
+  /* keep inner content tidy */
+  .dropdown-content.show img {
+    max-width: 80% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  /* optional: center any text inside the reveal box */
+  .dropdown-content.show a,
+  .dropdown-content.show p {
+    text-align: center !important;
+    display: block !important;
+  }
 }

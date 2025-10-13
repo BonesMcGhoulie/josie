@@ -1,175 +1,271 @@
+/* === GLOBAL STYLES === */
 body {
-    font-family: 'Comic Sans MS';
-    font-size: 90%;
-    position: relative;
+  margin: 0;
+  background: #2d2d2d;
+  color: #f9a0d5;
+  font-family: 'Comic Sans MS';
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
-body a {
-    font-size: 150%;
+/* === HEADER BAR === */
+h1 {
+  background: #d878b4;
+  color: white;
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 20px;
+  text-shadow: 1px 1px 2px #000;
+  line-height: 1.1;
+  text-align: center;
+  position: relative;
 }
 
-.queso {
-  position: absolute;
-  top: 20px; /* adjust as needed */
-  right: 20px; /* adjust as needed */
-  z-index: 1000; /* ensures it's above other content */
+/* === BOUNCING HEADER TEXT (centered) === */
+h1 span {
+  display: inline-block;
+  position: relative;
+  animation: bounceCenter 3s linear infinite alternate;
+  will-change: transform;
+  transform: translateX(0);
 }
 
-body .clips{
-  margin-left: 30px;
+@keyframes bounceCenter {
+  0% {
+    transform: translateX(-10%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
 }
 
+/* === SUBHEADINGS (site info lines) === */
+h3,
+h5 {
+  margin: 6px 0;
+  line-height: 1.3;
+}
+
+/* === ALIGN INTRO TEXT & AUDIO WITH BOX === */
+.graypink > h3,
+.graypink > h5 {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 6px auto;
+}
+
+/* === SPACING BETWEEN HEADER, TEXT, AND AUDIO === */
+.graypink > h3 {
+  margin-top: 25px;
+}
+
+.graypink > audio {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: block;
+  width: 330px;
+  max-width: 90%;
+  margin: 10px auto 20px auto;
+}
+
+/* === MAIN LAYOUT === */
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 70px;
+  margin: 25px auto 80px auto;
+  width: 95%;
+  max-width: 1200px;
+  padding-left: 40px;
 }
 
+/* === SIDEBAR BOX === */
 .text {
-    flex-grow: 1;
-    max-width: 70%;
+  background: #7a2b52;
+  border: 3px double #ffb4db;
+  width: 340px;
+  padding: 0;
+  color: #000;
+  box-sizing: border-box;
+  text-align: left;
 }
 
+/* === SECTION HEADINGS INSIDE BOX === */
+.text h2 {
+  background: #ff66b3;
+  color: #fff;
+  margin: 0;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  border-bottom: 3px double #ff94cb;
+  letter-spacing: 0.5px;
+  position: relative;
+  top: 0;
+}
+
+/* Ensure top heading looks the same size as the others while staying flush */
+.text h2:first-child {
+  margin-top: 0 !important;
+  padding-top: 6px !important;
+  line-height: 1.2 !important;
+}
+
+/* === CONTENT LISTS INSIDE BOX === */
+.text ul {
+  list-style: none;
+  margin: 8px 14px 12px 14px;
+  padding: 0;
+}
+
+.text ul li {
+  margin: 4px 0;
+}
+
+.text ul a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+.text ul a:hover {
+  color: #f78fcd;
+}
+
+/* === SPECIAL LINK COLORS === */
+.text a.green-link {
+  color: limegreen !important;
+  font-weight: bold;
+}
+
+.text a.green-link:hover {
+  color: rgb(187, 250, 187) !important;
+}
+
+.text a.comingsoon {
+  color: #a77a9b !important;
+}
+
+.text a.comingsoon:hover {
+  color: #d4aac8 !important;
+}
+
+/* === IMAGE SECTION === */
 .image {
-    position: absolute;
-    right: 60px;
-    margin-left: -45vw;
-    margin-top: -60px;
-    transform: translateX(-50%)
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image img {
-    border-radius: 30px;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
-@media (max-aspect-ratio: 4/3) {
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .text {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .image {
-        position: static;
-        margin: 20px 0;
-        transform: none;
-    }
-
-    .queso {
-        position: static;
-        transform: none;
-    }
+/* === QUESO MASCOT === */
+.queso {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 9999;
 }
 
-@media (max-aspect-ratio: 15/9) {
-
-    .image {
-        position: static;
-        margin: 60px 20px;
-        transform: none;
-    }
+/* === LINKS GENERAL === */
+a {
+  color: #ff24ab;
+  text-decoration: none;
 }
 
-.graypink a.green-link {
-    color: limegreen !important;
+a:hover {
+  color: #ffc2e9;
 }
 
-.graypink a.green-link:hover {
-    color: rgb(187, 250, 187) !important;
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .text {
+    width: 90%;
+    text-align: center;
+  }
+
+  .image {
+    margin-left: 0;
+  }
+
+  .image img {
+    max-width: 90%;
+  }
+
+  .text h2 {
+    width: 100%;
+  }
+
+  .graypink > h3,
+  .graypink > h5,
+  .graypink > audio {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .queso {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto 20px auto;
+  }
+
+  .graypink > audio {
+    width: 320px;
+    max-width: 90%;
+    margin: 15px auto 25px auto;
+  }
 }
 
-.graypink a.comingsoon {
-    color:rgb(151, 86, 125) !important;
+/* === MEDIUM SCREENS === */
+@media (max-width: 1300px) {
+  .container {
+    gap: 50px;
+    padding-left: 25px;
+  }
+
+  .text {
+    width: 320px;
+  }
+
+  .image img {
+    max-width: 470px;
+  }
 }
 
-.graypink a.comingsoon:hover {
-    color:rgb(175, 137, 160) !important;
-}
+/* === TABLET FIX === */
+@media (max-width: 1440px) and (min-width: 769px) {
+  .queso {
+    top: auto;
+    bottom: 20px;
+    right: 20px;
+    position: fixed;
+    transform: scale(0.9);
+  }
 
-.topblokelist {
-    padding-left: 2%;
-}
-
-.graypink {
-    background: rgb(52, 52, 52);
-    color:rgb(249, 160, 213);
-}
-
-.graypink a {
-    color:rgb(214, 57, 151);
-}
-
-.graypink a:hover {
-    color:rgb(247, 143, 205);
-}
-
-.purplegold {
-    background: rgb(76, 7, 63);
-    color:rgb(244, 249, 160);
-}
-
-.purplegold a {
-    color:rgb(214, 211, 57);
-}
-
-.purplegold a:hover {
-    color:rgb(255, 253, 147);
-}
-
-.hell {
-    background: rgb(78, 21, 21);
-    color:rgb(223, 144, 98);
-}
-
-.hell a {
-    color:rgb(255, 51, 0);
-}
-
-.hell a:hover {
-    color:rgb(255, 142, 114);
-}
-
-.green {
-    background: rgb(21, 78, 24);
-    color:rgb(106, 223, 98);
-}
-
-.green a {
-    color:rgb(1, 202, 168);
-}
-
-.green a:hover {
-    color:rgb(153, 255, 238);
-}
-
-.dumb {
-    background-image: url('types/82iq.png');
-    background-size: 60%;
-    color:rgb(144, 144, 222);
-}
-
-.dumb a {
-    color:rgb(1, 202, 168);
-}
-
-.dumb a:hover {
-    color:rgb(153, 255, 238);
-}
-
-.shitandpiss {
-    background: rgb(51, 26, 0);
-    color:rgb(221, 223, 98);
-}
-
-.shitandpiss a {
-    color:rgb(214, 211, 57);
-}
-
-.shitandpiss a:hover {
-    color:rgb(255, 253, 147);
+  .graypink > audio {
+    width: 350px;
+    margin-left: 40px;
+  }
 }

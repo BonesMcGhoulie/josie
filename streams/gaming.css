@@ -1,18 +1,57 @@
+/* === BASE LAYOUT === */
+body {
+    margin-top: 80px; /* matches header height */
+    margin-bottom: 60px; /* matches footer height */
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+}
+
+/* === HEADER === */
 .sticky-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: rgba(88, 72, 78, 0.8);
+    background-color: rgba(78, 72, 105, 0.95);
     z-index: 999;
     box-sizing: border-box;
 }
 
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: rgb(128, 255, 100);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.nav-links a {
+    color: rgb(24, 208, 0);
+}
+
+/* === FOOTER === */
 .sticky-footer {
     position: fixed;
     bottom: 0;
@@ -21,7 +60,7 @@
     background-color: rgba(88, 72, 78, 0.8);
     padding: 10px 0;
     display: flex;
-    justify-content: center; /* Centers the child div */
+    justify-content: center;
     align-items: center;
     z-index: 999;
     box-sizing: border-box;
@@ -32,158 +71,76 @@
 }
 
 .footer-link {
-    color: rgb(214, 57, 151);
     font-weight: bold;
     font-style: italic;
     font-size: 16px;
     text-decoration: none;
 }
 
-.footer-link:hover {
-    color: rgb(247, 143, 205);
-}
-  
-.heading {
-    font-size: 24px;
-    margin: 8px;
-    flex-grow: 1;
-}
-  
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 120px;
-    margin-right: 10%;
-    justify-content: flex-end;
-}
-  
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    font-style: italic;
-    white-space: nowrap;
-}
-  
-@media (max-aspect-ratio: 10/9) {
-  .sticky-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sticky-footer {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .sticky-footer .heading {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .sticky-footer .nav-links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-right: 0%;
-    gap: 5px;
-  }
-
-  .sticky-footer .nav-links a {
-    font-size: 14px;
-  }
-
-  .heading {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-right: 0%;
-    gap: 5px;
-  }
-
-  .nav-links a {
-    font-size: 14px;
-  }
-
-  .sticky-header img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-  }
-
-  body {
-    padding-top: 100px;
-  }
-
-  .dropdown-content {
-  display: none;
-  background-color: #310b3c;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  width: 300px !important; /* or a fixed width if you prefer */
-  margin-top: 10px;
-  }
-}
-
-body {
-    margin-top: 80px; /* Adjust value to match header height */
-    margin-bottom: 60px;
-    font-family: 'Comic Sans MS';
-    font-size: 90%;
-}  
-
-/* Dropdown Button */
-.dropbtn {
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
+/* === DROPDOWNS === */
 .dropdown {
-  display: block;
-  position: relative; /* or just remove if not needed */
-  margin-bottom: 20px; /* space between dropdowns */
-  margin-left: 20px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    z-index: 5; /* so dropdowns sit above gif */
+}
+
+.dropbtn {
+    cursor: pointer;
 }
 
 .dropdown-content {
-  display: none;
-  background-color: #310b3c;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  width: 1000px; /* or a fixed width if you prefer */
-  margin-top: 10px;
+    display: none;
+    position: relative;
+    z-index: 10;
+    background-color: #130b3c;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 1000px;
+    margin-top: 10px;
 }
 
 .dropdown-content.show {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
 }
 
 .grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .grid-item img {
-  border-radius: 6px;
-  margin-bottom: 8px;
-  width: 100%;
-  height: auto;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: auto;
 }
 
+/* === FIXED GIF === */
+.image {
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* spacing between gifs */
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;  /* optional: cap size */
+    height: auto;
+}
+
+
+/* === INPUT FIELD === */
 input[type="text"] {
     padding: 8px;
     margin: 20px;
@@ -191,17 +148,840 @@ input[type="text"] {
     width: 300px;
 }
 
+/* === COLOR THEME === */
 .graypink {
     background: rgb(101, 0, 127);
-    color:rgb(77, 255, 45);
+    color: rgb(77, 255, 45);
 }
 
 .graypink a {
-    color:rgb(24, 208, 0);
+    color: rgb(24, 208, 0);
     font-weight: bold;
     font-size: 120%;
 }
 
 .graypink a:hover {
-    color:rgb(128, 255, 100);
+    color: rgb(255, 255, 255);
+}
+
+/* === MOBILE HEADER FIX (STACKED & COMPACT, HOME ABOVE SORT) === */
+@media screen and (max-width: 1000px) {
+  .sticky-header {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 10px !important;
+    gap: 6px !important;
+    background-color: rgba(105, 72, 101, 0.95) !important;
+    text-align: center !important;
+  }
+
+  .heading {
+    font-size: 20px !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+    color: rgb(77, 255, 45) !important;
+  }
+
+  .nav-links {
+    display: flex !important;
+    flex-direction: column !important; /* stack vertically */
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important; /* tighter vertical spacing */
+    margin: 0 !important;
+  }
+
+  .nav-links a {
+    font-size: 15px !important;
+    padding: 2px 6px !important;
+    white-space: nowrap !important;
+  }
+
+  body {
+    margin-top: 95px !important; /* keeps content clear of header */
+  }
+
+  /* make sure first paragraph/audio isn’t hidden */
+  body.graypink p:first-of-type,
+  body.graypink audio:first-of-type {
+    margin-top: 10px !important;
+  }
+}
+
+
+
+    body {
+        margin:0 auto;
+        max-width:970px;
+    }
+    .graypink {
+        position: relative;
+    }
+    .graypink a {
+        color: rgb(128, 255, 100);
+    }
+    .graypink:before {
+        content:"";
+        background:rgba(142, 82, 126, .6);
+        width:100%;
+        height:100%;
+        position:absolute;
+        z-index:-1;
+        max-width:970px;
+    }
+    h1 {
+        text-shadow:1px 1px black;
+    }
+    h2 {
+        background:rgba(255,60,150,.5);
+        color: pink;
+        padding:4px;
+        border:6px double pink;
+        border-left: 0;
+        border-right: 0;
+        margin:0;
+    }
+    h2:first-of-type {
+        border-top:0;
+    }
+    h3 {
+        padding-left:8px
+    }
+    h5 {
+        padding-left: 8px
+    }
+    .queso {
+        position:absolute;
+    }
+    .container {
+        display:inline-block;
+        width:100%;
+        margin-left:8px;
+        margin-top:10px
+    }
+    .container hr {
+        display:none
+    }
+    .text {
+        float:left;
+        margin-right:20px;
+        background: #852c53;
+        border: 6px double pink;
+        width:330px;
+        color:black;
+    }
+    .text ul {
+        list-style: none;
+        padding:0;
+    }
+    .text ul a {
+        color: #000
+    }
+    .image {
+        right:20px;
+        margin-top:0;
+        transform: none;
+    }
+    input[type="text"] {
+        background: rgba(255, 60, 150, .5);
+        color: white;
+        padding: 4px;
+        outline: 3px double pink;
+        border: none;
+        font-family:inherit;
+        position:relative;
+        z-index:1;
+    }
+    input[type="text"]:focus {
+        outline-color: #3a7fd4
+    }
+    input[type="text"]::placeholder {
+        color: white;
+    }
+    .graypink a.dropbtn {
+        background: rgba(255, 60, 150, .5);
+        color: white;
+        padding: 4px;
+        border: 3px double pink;
+        font-weight:bold;
+    }
+    .graypink a.dropbtn:focus {
+        border-color: #ca3ad4
+    }
+    .grid-item {
+        margin-bottom: 0;
+    }
+    .grid-item a {
+        padding:10px 0;
+        width:100%;
+    }
+    .dropdown-content.show {
+        width:928px;
+        grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+        margin-left:8px;
+        border-radius:0;
+        box-shadow: none;
+        border:3px inset pink;
+        position:relative;
+        background: #310b3c
+    }
+    .dropdown-content.show::before {
+        content:"";
+        position: absolute;
+        margin-left: -1px;
+        top: -9px;
+        right: 120px;
+        display: inline-block;
+        border-left: 9px solid transparent;
+        border-right: 9px solid transparent;
+        border-bottom: 9px solid #ab8188;
+    }
+    body {
+        margin-top: 85px;
+    }
+    body .clips {
+        margin:0 8px
+    }
+    body > p {
+        padding:6px 8px 0 8px;
+    }
+    h1 {
+        background: transparent
+    }
+    .queso {
+        right:0;
+        top:0;
+        z-index:255456789
+    }
+
+    .graypink:before {
+        background:rgba(82, 126, 148, .6)
+    }
+    .graypink a.dropbtn {
+        background:rgba(252, 60, 255, 0.5);
+        border-color:#f200ff;
+    }
+    .dropdown-content.show {
+        border-color: #ff00ea;
+        background:#810583;
+        max-width: 800px;
+        margin-top:15px;
+    }
+    .dropdown-content.show::before {
+        border-bottom-color: #a500ab;
+        left:20px;
+        right:auto;
+    }
+    .sticky-header {
+        background-color:rgba(78, 72, 105, 0.8)
+    }
+
+/* Remove old box and centering constraints */
+.graypink {
+    background: none;
+    color:rgb(77, 255, 45);
+    position: static;
+}
+
+.graypink:before {
+    display: none;
+}
+
+/* Move content left */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+/* Adjust paragraph and tracklist text */
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.topblokelist {
+    margin-top: 10px;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(78, 72, 105, 0.8);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(78, 72, 105, 0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.footer-link {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* === IMAGES === */
+.image {
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;
+    height: auto;
+}
+
+/* === DROPDOWN CONTENT === */
+.dropdown-content.show {
+    width: 900px;
+    grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+    margin-left: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 3px inset rgb(77, 255, 45);
+    background: #050583;
+}
+
+.dropdown-content.show::before {
+    border-bottom-color: #0091ab;
+    left: 20px;
+    right: auto;
+}
+
+/* Keep the graypink theme with background */
+.graypink {
+    background: rgba(82, 126, 148, 0.6);
+    color: rgb(77, 255, 45);
+    position: relative;
+}
+
+/* Remove the box overlay, just keep the color */
+.graypink:before {
+    display: none;
+}
+
+/* Add spacing under header to prevent overlap */
+body {
+    margin-top: 120px; /* Adjusted from 85px to push content down */
+}
+
+/* Move content slightly left */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+/* Paragraph styling */
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(78, 72, 105, 0.8);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 26px;
+    margin: 8px;
+    flex-grow: 1;
+    color: rgb(77, 255, 45);
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(78, 72, 105, 0.9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.footer-link {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* === IMAGES === */
+.image {
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img {
+    border-radius: 30px;
+    max-width: 290px;
+    height: auto;
+}
+
+/* === DROPDOWN CONTENT === */
+.dropdown-content.show {
+    width: 900px;
+    grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+    margin-left: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 3px inset rgb(77, 255, 45);
+    background: #050583;
+}
+
+.dropdown-content.show::before {
+    border-bottom-color: #0091ab;
+    left: 20px;
+    right: auto;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(101, 0, 127);
+    color: rgb(77, 255, 45);
+    margin-top: 120px; /* prevent overlap from header */
+}
+
+/* === COLOR THEME === */
+.graypink {
+    background: rgb(101, 0, 127);
+    color: rgb(77, 255, 45);
+    position: relative;
+}
+
+.graypink:before {
+    display: none;
+}
+
+/* Keep left alignment and spacing */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(101, 0, 127); /* Original deep purple-blue background */
+    color: rgb(77, 255, 45);
+    margin-top: 120px; /* Prevent header overlap */
+}
+
+/* === COLOR THEME === */
+.graypink {
+    background: rgb(101, 0, 127); /* Keep original solid background */
+    color: rgb(77, 255, 45);
+    position: relative;
+}
+
+.graypink:before {
+    display: none; /* remove overlay box */
+}
+
+.graypink a {
+    color: rgb(24, 208, 0);
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.graypink a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Shift all top content to the left */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* === HEADER === */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgba(105, 72, 101, 0.95);
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 24px;
+    margin: 8px;
+    flex-grow: 1;
+    color: rgb(77, 255, 45);
+}
+
+.nav-links {
+    display: flex;
+    gap: 120px;
+    margin-right: 10%;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: rgb(128, 255, 100);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+/* === FOOTER === */
+.sticky-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(105, 72, 101, 0.95); /* original footer color */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+/* === IMAGES === */
+.image {
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 0;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img {
+    border-radius: 30px;
+    height: auto;
+}
+
+/* === DROPDOWN CONTENT === */
+.dropdown-content.show {
+    width: 928px;
+    grid-template-columns: repeat(auto-fill, minmax(187px, 1fr));
+    margin-left: 40px;
+    border-radius: 0;
+    box-shadow: none;
+    border: 3px inset pink;
+    background: #310b3c; /* original dropdown background */
+}
+
+.dropdown-content.show::before {
+    border-bottom-color: #ab8188;
+    left: 20px;
+    right: auto;
+}
+
+/* === BASE LAYOUT === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(101, 0, 127);
+    color: rgb(77, 255, 45);
+    margin-top: 90px; /* was 120px — moved closer to header */
+}
+
+/* Keep left alignment and spacing */
+body.graypink p,
+body.graypink audio,
+body.graypink hr,
+body.graypink .topblokelist {
+    margin-left: 40px;
+}
+
+body.graypink p {
+    max-width: 900px;
+    line-height: 1.5;
+    margin-top: 5px; /* was 10px — tighter gap below header */
+}
+
+/* === Prevent footer overlap === */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Sans MS';
+    font-size: 90%;
+    background: rgb(101, 0, 127);
+    color: rgb(77, 255, 45);
+    margin-top: 90px; /* for spacing under header */
+    padding-bottom: 80px; /* NEW: makes sure last song isn't hidden behind footer */
+}
+
+
+/* === Tracklist Wrapping Fix for All Screen Sizes === */
+.topblokelist {
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin: 10px 0 0 40px;
+    padding: 0;
+}
+
+.topblokelist li {
+    display: list-item;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    white-space: normal; /* allow line breaks */
+    overflow-wrap: break-word; /* wraps long words */
+    word-break: break-word; /* ensures break inside long names */
+}
+
+/* Allow links to stretch and wrap correctly */
+.topblokelist li a {
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal; /* fixes wrapping inside links */
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* === RESPONSIVE FIX: prevent GIFs from overlapping === */
+@media screen and (max-width: 1350px) {
+  .image {
+    position: static !important;        /* remove fixed positioning */
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px auto 60px auto;       /* add space around GIFs */
+    width: 100%;
+    max-width: 500px;                  /* prevents them from being too large */
+  }
+
+  .image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  /* optional: center the audio/text when GIFs move below */
+  body.graypink p,
+  body.graypink audio,
+  body.graypink hr,
+  body.graypink .topblokelist {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* === MATCH HEADER PROPORTIONS TO CLIPSSTYLE.CSS === */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* identical padding */
+  box-sizing: border-box;
+  z-index: 999;
+  line-height: 1.1;
+}
+
+.heading {
+  font-size: 24px; /* same heading size */
+  margin: 8px;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px;
+  margin-right: 10%;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: rgb(128, 255, 100);
+  text-decoration: none;
+  font-size: 18px; /* increased from 16px to match clips header */
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap;
+  text-shadow: 1px 1px black;
+  background: transparent;
+}
+/* === MOBILE DROPDOWN BOX FIX (CENTERED & CONTAINED) === */
+@media screen and (max-width: 1000px) {
+  .dropdown-content.show {
+    width: 90% !important;                 /* don’t stretch full width */
+    max-width: 500px !important;           /* cap size for readability */
+  }
+
+  /* keep inner content tidy */
+  .dropdown-content.show img {
+    max-width: 80% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  /* optional: center any text inside the reveal box */
+  .dropdown-content.show a,
+  .dropdown-content.show p {
+    text-align: center !important;
+    display: block !important;
+  }
+}
+
+
+.nav-links a {
+    color: rgb(24, 208, 0);
+}
+
+.topblokelist li a {
+    color: rgb(77, 255, 45) !important; /* same green as the numbers */
+}
+
+
+.topblokelist li a:hover {
+  color:white;
+}
+.topblokelist li a {
+    color: rgb(77, 255, 45) !important; /* same green as the numbers */
+    text-decoration: none; /* optional: removes underline */
+}
+
+.topblokelist li a:hover {
+    color: white !important; /* turns white when hovered */
+}
+
+.topblokelist li a {
+    color: rgb(77, 255, 45) !important; /* bright green */
+    text-decoration: underline !important; /* force underline */
+}
+
+.topblokelist li a:hover {
+    color: white !important; /* white when hovered */
+    text-decoration: underline !important; /* keep underline on hover */
+}
+
+/* Game title links (no underline) */
+.topblokelist li a {
+    color: rgb(77, 255, 45) !important; /* same green as the numbers */
+    text-decoration: none !important;
+}
+
+.topblokelist li a:hover {
+    color: white !important;
+    text-decoration: none !important; /* still no underline */
+}
+
+/* Links inside dropdown boxes (under pictures) */
+.dropdown-content.show a {
+    color: rgb(77, 255, 45) !important; /* same green */
+    text-decoration: underline !important; /* underline ON for these */
+}
+
+.dropdown-content.show a:hover {
+    color: white !important;
+    text-decoration: underline !important;
 }
