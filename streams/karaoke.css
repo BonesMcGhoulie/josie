@@ -808,8 +808,8 @@ body.graypink p {
     margin-left: 40px;
     border-radius: 0;
     box-shadow: none;
-    border: 3px inset pink;
-    background: #310b3c; /* original dropdown background */
+    border: 3px inset rgb(192, 246, 255);
+    background: rgb(16, 0, 52); /* original dropdown background */
 }
 
 .dropdown-content.show::before {
