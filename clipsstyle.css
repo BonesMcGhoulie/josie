@@ -50,16 +50,16 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background: #f562bdb0; /* same pink tone as Top Bloke header */
+  background: #f59862b0; /* same pink tone as Top Bloke header */
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 999;
-  color: white; /* make all header text white */
+  color: rgb(0, 0, 0); /* make all header text white */
   line-height: 1.1;
 }
 
 .sticky-header a {
-  color: white !important; /* ensure header links are white */
+  color: rgb(0, 0, 0) !important; /* ensure header links are white */
   text-decoration: none;
   font-weight: 700;
   font-style: italic;
@@ -68,8 +68,8 @@ img {
 /* Add this after your existing .sticky-header a:hover rules */
 .sticky-header a:hover,
 .nav-links a:hover {
-  color: #ffffff !important; /* bright white like footer hover */
-  text-shadow: 0 0 6px #ffcbeb; /* same pink glow as footer */
+  color: rgb(0, 0, 0) !important; /* bright white like footer hover */
+  text-shadow: 0 0 6px #ffe8cb; /* same pink glow as footer */
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
@@ -78,14 +78,14 @@ img {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #5a1e40af; /* darker purple, distinct from body */
-  color: #fff5fa; /* soft white-pink text */
+  background: #5a331eaf; /* darker purple, distinct from body */
+  color: #000000; /* soft white-pink text */
   text-align: center;
   padding: 12px 0; /* slightly taller for comfort */
   font-style: italic;
   font-size: 1rem; /* independent footer text size */
   line-height: 1.4;
-  border-top: 3px double #ffb4db;
+  border-top: 3px double #ffdab4;
   box-sizing: border-box;
   z-index: 9999;
 }
@@ -93,7 +93,7 @@ img {
 /* Footer links — their own color, size, and style */
 .sticky-footer a,
 .sticky-footer .footer-link {
-  color: #ffd3ef !important; /* lighter pink */
+  color: #000000 !important; /* lighter pink */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05rem; /* slightly larger than base footer text */
@@ -103,8 +103,8 @@ img {
 
 .sticky-footer a:hover,
 .sticky-footer .footer-link:hover {
-  color: #ffffff !important; /* bright white */
-  text-shadow: 0 0 6px #d878b4; /* glow to match header color */
+  color: #000000 !important; /* bright white */
+  text-shadow: 0 0 6px orange; /* glow to match header color */
 }
 
 /* ===== Navigation ===== */
@@ -112,7 +112,7 @@ img {
   font-size: 24px;
   margin: 8px;
   flex-grow: 1;
-  color: white; /* make "All Clips" white */
+  color: rgb(0, 0, 0); /* make "All Clips" white */
 }
 
 .nav-links {
@@ -150,10 +150,10 @@ img {
   cursor: pointer;
   line-height: 23px;
   display: inline-block;
-  background: rgba(255, 60, 150, 0.5);
-  color: white; /* make Jump button text white */
+  background: rgba(255, 144, 60, 0.5);
+  color: rgb(0, 0, 0); /* make Jump button text white */
   padding: 4px;
-  border: 3px double pink;
+  border: 3px double orange;
   font-weight: bold;
 }
 
@@ -164,7 +164,7 @@ img {
 /* Dropdown Content */
 .dropdown-content {
   display: none;
-  background-color: #454545;
+  background-color: #000000;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -178,8 +178,8 @@ img {
   width: 928px;
   margin-left: 8px;
   border-radius: 0;
-  border: 3px inset pink;
-  background: #5411679d;
+  border: 3px inset orange;
+  background: #6733119d;
   box-shadow: none;
   position: relative;
 }
@@ -210,13 +210,13 @@ img {
 
 /* ===== Inputs ===== */
 input[type="text"] {
-  background: rgba(255, 60, 150, 0.5);
+  background: rgba(255, 144, 60, 0.5);
   color: white;
   padding: 4px;
   margin: 20px;
   font-size: 16px;
   width: 300px;
-  outline: 3px double pink;
+  outline: 3px double orange;
   border: none;
   font-family: inherit;
   position: relative;
@@ -235,7 +235,7 @@ input[type="text"]::placeholder {
 .graypink {
   position: relative;
   background: rgb(52, 52, 52);
-  color: rgb(249, 160, 213);
+  color: rgb(249, 201, 160);
 }
 
 .graypink::before {
@@ -248,11 +248,11 @@ input[type="text"]::placeholder {
 }
 
 .graypink a {
-  color: rgb(214, 57, 151);
+  color: rgb(214, 141, 57);
 }
 
 .graypink a:hover {
-  color: rgb(247, 143, 205);
+  color: rgb(247, 202, 143);
 }
 
 /* ===== Containers ===== */
@@ -270,8 +270,8 @@ input[type="text"]::placeholder {
 .text {
   float: left;
   margin-right: 20px;
-  background: #852c53;
-  border: 6px double pink;
+  background: #85562c;
+  border: 6px double orange;
   width: 330px;
   color: black;
 }
@@ -298,10 +298,10 @@ h1 {
 }
 
 h2 {
-  background: rgba(255, 60, 150, 0.5);
-  color: pink;
+  background: rgba(255, 144, 60, 0.5);
+  color: orange;
   padding: 4px;
-  border: 6px double pink;
+  border: 6px double orange;
   border-left: 0;
   border-right: 0;
   margin: 0;
@@ -317,8 +317,8 @@ h5 {
 }
 
 .clips p {
-  color: rgb(249, 160, 213);
-  text-shadow: 1px 2px 3px rgba(222, 40, 114, 0.6);
+  color: rgb(249, 201, 160);
+  text-shadow: 1px 2px 3px rgba(222, 125, 40, 0.6);
   font-size: 18px;
   padding: 0;
 }
@@ -389,9 +389,9 @@ h5 {
     padding: 10px 12px;
     font-size: 1rem;
     font-weight: bold;
-    border: 3px double pink;
-    background: rgba(255, 60, 150, 0.6);
-    color: white;
+    border: 3px double orange;
+    background: rgba(255, 131, 60, 0.6);
+    color: rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -477,8 +477,8 @@ h5 {
     padding: 10px 14px;
     font-size: 1rem;
     font-weight: bold;
-    border: 3px double pink;
-    background: rgba(255, 60, 150, 0.6);
+    border: 3px double orange;
+    background: rgba(255, 131, 60, 0.6);
     color: white;
     display: flex;
     align-items: center;
@@ -530,9 +530,9 @@ h5 {
 
 /* ===== Global "Jump to" Button Style (Fixed Text Color) ===== */
 .dropbtn {
-  background: #c94c9b !important;           /* distinct pink-purple tone */
+  background: #c97e4c !important;           /* distinct pink-purple tone */
   color: #ffffff !important;                /* force white text */
-  border: 3px double #ffb4db !important;
+  border: 3px double #ffdab4 !important;
   border-radius: 8px;
   padding: 10px 16px !important;
   font-weight: bold;
@@ -548,9 +548,9 @@ h5 {
 /* Hover + focus states */
 .dropbtn:hover,
 .dropbtn:focus {
-  background: #e36ab9 !important;           /* lighter hover color */
+  background: #e39e6a !important;           /* lighter hover color */
   color: #ffffff !important;
-  border-color: #ffd3ef !important;
+  border-color: #ffe8d3 !important;
   box-shadow: 0 0 10px rgba(255, 192, 220, 0.7);
   transform: translateY(-1px);
 }
@@ -791,4 +791,8 @@ h5 {
 
 .typeslist {
   font-size: 30px;
+}
+
+body {
+  background-color: rgb(23, 23, 23) !important;
 }
