@@ -1,9 +1,8 @@
-
 /* === GLOBAL STYLES === */
 body {
   margin: 0;
   background: #2d2d2d;
-  color: #f9c9a0;
+  color: #f9a0d5;
   font-family: 'Comic Sans MS';
   line-height: 1.5;
   overflow-x: hidden;
@@ -11,8 +10,8 @@ body {
 
 /* === HEADER BAR === */
 h1 {
-  background: orange;
-  color: rgb(0, 0, 0);
+  background: #d878b4;
+  color: white;
   font-size: 2.2em;
   font-weight: bold;
   margin: 0;
@@ -88,8 +87,8 @@ h5 {
 
 /* === SIDEBAR BOX === */
 .text {
-  background: #8b5329;
-  border: 3px double #ffdab4;
+  background: #7a2b52;
+  border: 3px double #ffb4db;
   width: 340px;
   padding: 0;
   color: #000;
@@ -99,14 +98,14 @@ h5 {
 
 /* === SECTION HEADINGS INSIDE BOX === */
 .text h2 {
-  background: rgb(219, 110, 0);
+  background: #ff66b3;
   color: #fff;
   margin: 0;
   padding: 6px 0;
   font-weight: bold;
   font-size: 1.2em;
   text-align: center;
-  border-bottom: 3px double #dc8f04;
+  border-bottom: 3px double #ff94cb;
   letter-spacing: 0.5px;
   position: relative;
   top: 0;
@@ -138,7 +137,7 @@ h5 {
 }
 
 .text ul a:hover {
-  color: #f7ca8f;
+  color: #f78fcd;
 }
 
 /* === SPECIAL LINK COLORS === */
@@ -152,11 +151,11 @@ h5 {
 }
 
 .text a.comingsoon {
-  color: #a78c7a !important;
+  color: #a77a9b !important;
 }
 
 .text a.comingsoon:hover {
-  color: #d4bfaa !important;
+  color: #d4aac8 !important;
 }
 
 /* === IMAGE SECTION === */
@@ -185,7 +184,7 @@ h5 {
 
 /* === LINKS GENERAL === */
 a {
-  color: #d68d39;
+  color: #ff24ab;
   text-decoration: none;
 }
 
@@ -269,8 +268,4 @@ a:hover {
     width: 350px;
     margin-left: 40px;
   }
-}
-
-body {
-  background-color: rgb(23, 23, 23) !important;
 }
