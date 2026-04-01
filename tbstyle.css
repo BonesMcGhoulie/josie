@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background: #2d2d2d;
-  color: #f9a0d5;
+  color: #a0a2f9;
   font-family: 'Comic Sans MS';
   line-height: 1.5;
   overflow-x: hidden;
@@ -19,7 +19,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background: #f562bdb0; /* same pink tone as Top Bloke header */
+  background: #626cf5b0; /* same pink tone as Top Bloke header */
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 999;
@@ -38,7 +38,7 @@ body {
 .sticky-header a:hover,
 .nav-links a:hover {
   color: #ffffff !important; /* bright white like footer hover */
-  text-shadow: 0 0 6px #ffcbeb; /* same pink glow as footer */
+  text-shadow: 0 0 6px #cbcbff; /* same pink glow as footer */
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
@@ -76,18 +76,18 @@ h1 {
 }
 
 .nav-links a:hover {
-  color: #ffe0f3;
+  color: #e1e0ff;
 }
 
 
 /* === MAIN CONTENT === */
 .graypink {
   background: #343434;
-  color: #f9a0d5;
+  color: #a0a2f9;
   max-width: 900px;
   margin: 70px auto 40px;
   padding: 30px;
-  border: 3px double #ffb4db;
+  border: 3px double #b8b4ff;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
@@ -114,14 +114,14 @@ h1 {
 }
 
 .topblokelist a {
-  color: rgb(214, 57, 151);
+  color: rgb(65, 57, 214);
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s ease;
 }
 
 .topblokelist a:hover {
-  color: #ffc2e9;
+  color: #cac2ff;
 }
 
 /* === FOOTER === */
@@ -130,14 +130,14 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #5a1e40af; /* darker purple, same as clipsstyle */
-  color: #fff5fa; /* soft white-pink text */
+  background: #231e5aaf; /* darker purple, same as clipsstyle */
+  color: #f5f5ff; /* soft white-pink text */
   text-align: center;
   padding: 12px 0; /* slightly taller for comfort */
   font-style: italic;
   font-size: 1rem;
   line-height: 1.4;
-  border-top: 3px double #ffb4db;
+  border-top: 3px double #b8b4ff;
   box-sizing: border-box;
   z-index: 9999;
 }
@@ -145,7 +145,7 @@ h1 {
 /* Footer links — their own color, size, and style */
 .sticky-footer a,
 .sticky-footer .footer-link {
-  color: #ffd3ef !important; /* lighter pink */
+  color: #d8d3ff !important; /* lighter pink */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05rem;
@@ -162,12 +162,12 @@ h1 {
 
 /* === GENERAL LINKS === */
 a {
-  color: #ff85d0;
+  color: #9385ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffc2e9;
+  color: #cac2ff;
 }
 
 /* === RESPONSIVE === */

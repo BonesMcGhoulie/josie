@@ -16,13 +16,13 @@ img {
 
 .graypink {
     background: rgb(52, 52, 52);
-    color:rgb(249, 160, 213);
+    color:rgb(160, 162, 249);
 }
 
 .graypink a {
-    color:rgb(214, 57, 151);
+    color:rgb(70, 57, 214);
 }
 
 .graypink a:hover {
-    color:rgb(247, 143, 205);
+    color:rgb(152, 143, 247);
 }

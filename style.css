@@ -2,7 +2,7 @@
 body {
   margin: 0;
   background: #2d2d2d;
-  color: #f9a0d5;
+  color: #a3a0f9;
   font-family: 'Comic Sans MS';
   line-height: 1.5;
   overflow-x: hidden;
@@ -10,7 +10,7 @@ body {
 
 /* === HEADER BAR === */
 h1 {
-  background: #d878b4;
+  background: #787ad8;
   color: white;
   font-size: 2.2em;
   font-weight: bold;
@@ -87,8 +87,8 @@ h5 {
 
 /* === SIDEBAR BOX === */
 .text {
-  background: #7a2b52;
-  border: 3px double #ffb4db;
+  background: #2b2f7a;
+  border: 3px double #b5b4ff;
   width: 340px;
   padding: 0;
   color: #000;
@@ -98,14 +98,14 @@ h5 {
 
 /* === SECTION HEADINGS INSIDE BOX === */
 .text h2 {
-  background: #ff66b3;
-  color: #fff;
+  background: #7d66ff;
+  color: #ffffff;
   margin: 0;
   padding: 6px 0;
   font-weight: bold;
   font-size: 1.2em;
   text-align: center;
-  border-bottom: 3px double #ff94cb;
+  border-bottom: 3px double #9694ff;
   letter-spacing: 0.5px;
   position: relative;
   top: 0;
@@ -137,7 +137,7 @@ h5 {
 }
 
 .text ul a:hover {
-  color: #f78fcd;
+  color: #8f8ff7;
 }
 
 /* === SPECIAL LINK COLORS === */
@@ -151,11 +151,11 @@ h5 {
 }
 
 .text a.comingsoon {
-  color: #a77a9b !important;
+  color: #7e7aa7 !important;
 }
 
 .text a.comingsoon:hover {
-  color: #d4aac8 !important;
+  color: #abaad4 !important;
 }
 
 /* === IMAGE SECTION === */
@@ -184,12 +184,12 @@ h5 {
 
 /* === LINKS GENERAL === */
 a {
-  color: #ff24ab;
+  color: #2f24ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffc2e9;
+  color: #c2c5ff;
 }
 
 /* === RESPONSIVE ADJUSTMENTS === */
