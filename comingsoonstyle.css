@@ -15,14 +15,14 @@ img {
 }
 
 .graypink {
-    background: rgb(52, 52, 52);
-    color:rgb(249, 160, 213);
+    background: rgb(0, 0, 0);
+    color:#c50000;
 }
 
 .graypink a {
-    color:rgb(214, 57, 151);
+    color:#f70000;
 }
 
 .graypink a:hover {
-    color:rgb(247, 143, 205);
+    color:#f78787;
 }

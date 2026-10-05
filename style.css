@@ -1,8 +1,9 @@
+
 /* === GLOBAL STYLES === */
 body {
   margin: 0;
   background: #2d2d2d;
-  color: #f9a0d5;
+  color: #900000;
   font-family: 'Comic Sans MS';
   line-height: 1.5;
   overflow-x: hidden;
@@ -10,8 +11,8 @@ body {
 
 /* === HEADER BAR === */
 h1 {
-  background: #d878b4;
-  color: white;
+  background: rgb(22, 22, 22);
+  color: #900000;
   font-size: 2.2em;
   font-weight: bold;
   margin: 0;
@@ -87,25 +88,25 @@ h5 {
 
 /* === SIDEBAR BOX === */
 .text {
-  background: #7a2b52;
-  border: 3px double #ffb4db;
+  background: #333333;
+  border: 3px double #5b5b5b;
   width: 340px;
   padding: 0;
-  color: #000;
+  color: #900000;
   box-sizing: border-box;
   text-align: left;
 }
 
 /* === SECTION HEADINGS INSIDE BOX === */
 .text h2 {
-  background: #ff66b3;
-  color: #fff;
+  background: rgb(22, 22, 22);
+  color: #818181;
   margin: 0;
   padding: 6px 0;
   font-weight: bold;
   font-size: 1.2em;
   text-align: center;
-  border-bottom: 3px double #ff94cb;
+  border-bottom: 3px double #3a3a3a;
   letter-spacing: 0.5px;
   position: relative;
   top: 0;
@@ -130,32 +131,32 @@ h5 {
 }
 
 .text ul a {
-  color: #000;
+  color: #f70000;
   text-decoration: none;
   font-size: 1.05em;
   line-height: 1.6;
 }
 
 .text ul a:hover {
-  color: #f78fcd;
+  color: #f78787;
 }
 
 /* === SPECIAL LINK COLORS === */
 .text a.green-link {
-  color: limegreen !important;
+  color: rgb(223, 112, 15) !important;
   font-weight: bold;
 }
 
 .text a.green-link:hover {
-  color: rgb(187, 250, 187) !important;
+  color: rgb(250, 213, 187) !important;
 }
 
 .text a.comingsoon {
-  color: #a77a9b !important;
+  color: #d56464 !important;
 }
 
 .text a.comingsoon:hover {
-  color: #d4aac8 !important;
+  color: #ea9090 !important;
 }
 
 /* === IMAGE SECTION === */
@@ -170,8 +171,6 @@ h5 {
   height: auto;
   display: block;
   border: none;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 /* === QUESO MASCOT === */
@@ -184,12 +183,12 @@ h5 {
 
 /* === LINKS GENERAL === */
 a {
-  color: #ff24ab;
+  color: #f70000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #ffc2e9;
+  color: #f78787;
 }
 
 /* === RESPONSIVE ADJUSTMENTS === */
@@ -268,4 +267,8 @@ a:hover {
     width: 350px;
     margin-left: 40px;
   }
+}
+
+body {
+  background-color: rgb(0, 0, 0) !important;
 }
