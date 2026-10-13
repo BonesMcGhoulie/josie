@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>□□□□□□□□□□□□□□□□□□forever.html</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body class="graypink">
+<audio id="audio" autoplay loop hidden>
+    Your browser does not support the audio element.
+</audio>
+
+
+    <div class="container">
+<p id="message">i don't like the daylight</p>
+      <div class="image">
+        <a href="index.html"><img id="time-image" src="images/horrorsie.png" alt="JosieWosie"></a>
+      </div>
+    </div>
+
+    <script>
+      var audio = document.getElementById("audio");
+      audio.volume = 0.25;
+    </script>
+
+    <script>
+        function updateImageByTime() {
+            const hour = new Date().getHours();
+            const imgElement = document.getElementById('time-image');
+
+            if (hour < 3) {
+                imgElement.src = "images/horrorsie.png";
+                imgElement.alt = " ";
+            } else if (hour < 4) {
+                imgElement.src = "images/forever.png";
+                imgElement.alt = "Pages are FOREVER";
+            } else {
+                imgElement.src = "images/horrorsie.png";
+                imgElement.alt = " ";
+            }
+        }
+
+        updateImageByTime();
+    </script>
+
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+    const audioElement = document.getElementById('audio');
+    const currentHour = new Date().getHours();
+
+    if (currentHour < 3) {
+        audioElement.src = "audio/halloween/man.ogg";
+    } else if (currentHour < 4) {
+        audioElement.src = "audio/halloween/wind.ogg";
+        audio.volume = 1.00;
+    } else {
+        audioElement.src = "audio/halloween/man.ogg";
+    }
+
+    audioElement.load(); 
+});
+
+  </script>
+
+<script>
+  // 1. Get the current hour (0 - 23)
+  const hour = new Date().getHours();
+  const pElement = document.getElementById("message");
+
+  // 2. Change text based on the hour
+  if (hour < 3) {
+    pElement.textContent = "you shouldn't be here. come back when everything is alright.";
+  } else if (hour < 4) {
+    pElement.textContent = "pages are FOREVER";
+  } else {
+    pElement.textContent = "you shouldn't be here. come back when everything is alright.";
+  }
+</script>
+
+
+  <script>
+    let audio = document.getElementById("myaudio");
+audio.style.display = "none";
+  </script>
+  </body>
+</html>
