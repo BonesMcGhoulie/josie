@@ -7,26 +7,27 @@
   </head>
 
   <body class="graypink">
-    <h1><span id="h1">Welcome to JoOOOOOoooosieWosie.com!</span></h1>
-    <h3 id="h3">A <a href="https://www.youtube.com/@sheep_xing" target="_blank">Sheep_Xing</a> clip archive/stream organization tool ran by <a href="https://x.com/BonesMcGhoulie" target="_blank">Huell</a> and helped styled by <a href="https://x.com/legosavant123" target="_blank">rlego</a>.<br /><br />
-    Click <a href="https://x.com/josiewosiesite" target="_blank">here</a> to see the latest site updates via the site's twitter!</h3>
-    <h5 id="h5">Last updated: 10/26/2026 11:49PM EST</h5>
+    <h1><span>Welcome to JosieWosie.com!</span></h1>
+    <h3>A <a href="https://www.youtube.com/@sheep_xing" target="_blank">Sheep_Xing</a> clip archive/stream organization tool ran by <a href="https://x.com/BonesMcGhoulie" target="_blank">Huell</a> and helped styled by <a href="https://x.com/legosavant123" target="_blank">rlego</a>.</h3>
+    <h3>Click <a href="https://x.com/josiewosiesite" target="_blank">here</a> to see the latest site updates via the site's twitter!</h3>
+    <h5>Last updated: 11/4/2026 10:51PM EST</h5>
 
-<audio id="audio" autoplay loop controls>
-    Your browser does not support the audio element.
-</audio>
+    <audio controls autoplay loop id="audio">
+      <source src="audio/dontbotherme.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
 
     <div class="queso">
-      <a id="quesoarcade" href="games/quesosarcade.html"><img id="quesoimage" img src="images/quesosarcade.png" width="300px" height="214px"></a>
+      <a href="games/quesosarcade.html"><img src="images/quesosarcade.png" width="300px" height="214px"></a>
     </div>
 
-    <div class="container" id="link-box">
+    <div class="container">
       <div class="text">
         <h2>Clips:</h2>
         <ul>
           <li><a href="all.html">All Clips (12,000+)</a></li>
           <li><a href="random.html" target="_blank">Random Clip</a></li>
-          <li id="types"><a href="types.html">Types of Clips</a></li>
+          <li><a href="types.html">Types of Clips</a></li>
           <li><a href="streams/karaoke.html" class="green-link">Karaoke Tracklist (NEW!)</a></li>
         </ul>
 
@@ -42,14 +43,14 @@
 
         <h2>Other:</h2>
         <ul>
-          <li><a href="topbloke.html">Top Ghoul List</a></li>
+          <li><a href="topbloke.html">Top Bloke List</a></li>
           <li><a href="https://linktr.ee/sheepxing" target="_blank">Josie's Linktree</a></li>
           <li><a href="https://streamlabs.com/sheep_xing1/tip" target="_blank">Donate to Josie</a></li>
         </ul>
       </div>
 
       <div class="image">
-        <a href="heaven.html"><img id="time-image" src="images/creepsiewithblood.gif" alt="JosieWosie"></a>
+        <a href="perfectjosieheavenforever.html"><img src="images/aryansie.png" alt="JosieWosie"></a>
       </div>
     </div>
 
@@ -57,123 +58,5 @@
       var audio = document.getElementById("audio");
       audio.volume = 0.25;
     </script>
-
-    <script>
-        function updateImageByTime() {
-            const hour = new Date().getHours();
-            const imgElement = document.getElementById('time-image');
-
-            if (hour < 3) {
-                imgElement.src = "images/creepsiewithblood.gif";
-                imgElement.alt = "A beautiful smile.";
-            } else if (hour < 4) {
-                imgElement.src = "images/horrorsie.gif";
-                imgElement.alt = "A smile.";
-            } else {
-                imgElement.src = "images/creepsiewithblood.gif";
-                imgElement.alt = "A beautiful smile.";
-            }
-        }
-
-        updateImageByTime();
-
-        
-    
-    </script>
-
-
-
-<script>
-  const hour = new Date().getHours();
-  const pElement = document.getElementById("h1");
-
-  if (hour < 3) {
-    pElement.textContent = "Welcome to JoOOOOOoooosieWosie.com!";
-  } else if (hour < 4) {
-    pElement.textContent = ' ';
-    pElement.innerHTML = '<br />'
-  } else {
-    pElement.textContent = "Welcome to JoOOOOOoooosieWosie.com!";
-  }
-</script>
-
-<script>
-    const h3Element = document.getElementById("h3");
-    const h5Element = document.getElementById("h5");
-    const liElement = document.getElementById("types");
-    const imageLink = document.getElementById('quesoarcade');
-
-    if (hour < 3) {
-        h3Element.innerHTML = `
-            A <a href="https://www.youtube.com/@sheep_xing" target="_blank">Sheep_Xing</a> clip archive/stream organization tool ran by <a href="https://x.com/BonesMcGhoulie" target="_blank">Huell</a> and helped styled by <a href="https://x.com/legosavant123" target="_blank">rlego</a>.<br /><br />
-            Click <a href="https://x.com/josiewosiesite" target="_blank">here</a> to see the latest site updates via the site's twitter!
-        `;
-        h5Element.innerHTML = 'Last updated: 10/26/2026 11:49PM EST';
-        liElement.innerHTML = '<a href="types.html">Types of Clips</a>';
-        imageLink.href = "games/quesosarcade.html";
-    } else if (hour < 4) {
-        h3Element.innerHTML = `
-            <br />
-        `;
-        h5Element.innerHTML = ' ';
-        liElement.innerHTML = '<a href="REDACTED.html">Ŗ̷̛͕͖̳̖̤͆̋̀̅̇͛́Ë̴̲͖͓́̃̉̑͜D̸̂̌̊̒ͅĄ̸̢͈̤͉̰̯͕̦̝̹͉̔͆C̶̢̛͔͓̬̪̪̺̫͇̫̞̟̞̉̎̃͊̀̅̑̀́̎̍̇͌̔T̸̹̲̤͒̀͑̀̿̈́̕͘͝E̶̖̗̯͇͔͔̞̞͉̣̜͓̍̑̏͒͒̔̃͆̓́̀̆͘̚͠Ḏ̸̨̛̛̦̬̣̫͖̹̻̫̗̮͗̓̿̓́̎̆̓͜͝͝</a>';
-        imageLink.href = "games/someonesarcade.html";
-    } else {
-        h3Element.innerHTML = `
-            A <a href="https://www.youtube.com/@sheep_xing" target="_blank">Sheep_Xing</a> clip archive/stream organization tool ran by <a href="https://x.com/BonesMcGhoulie" target="_blank">Huell</a> and helped styled by <a href="https://x.com/legosavant123" target="_blank">rlego</a>.<br /><br />
-            Click <a href="https://x.com/josiewosiesite" target="_blank">here</a> to see the latest site updates via the site's twitter!
-        `;
-        h5Element.innerHTML = 'Last updated: 10/26/2026 11:49PM EST';
-        liElement.innerHTML = '<a href="types.html">Types of Clips</a>';
-        imageLink.href = "games/quesosarcade.html";
-    }
-</script>
-
-
-
-
-
-    <script>
-        function updateImageByTime() {
-            const hour = new Date().getHours();
-            const imgElement = document.getElementById('quesoimage');
-
-            if (hour < 3) {
-                imgElement.src = "images/quesosarcade.png";
-                imgElement.alt = "A beautiful dino.";
-            } else if (hour < 4) {
-                imgElement.src = "images/gone.png";
-                imgElement.alt = "But nobody came.";
-            } else {
-                imgElement.src = "images/quesosarcade.png";
-                imgElement.alt = "A beautiful dino.";
-            }
-        }
-
-        updateImageByTime();
-
-        
-    
-    </script>
-
-    <script>
-    window.addEventListener('DOMContentLoaded', () => {
-    const audioElement = document.getElementById('audio');
-    const currentHour = new Date().getHours();
-
-    if (currentHour < 3) {
-        audioElement.src = "audio/halloween/fridaythe13thpart3.ogg";
-    } else if (currentHour < 4) {
-        audioElement.src = "audio/halloween/man.ogg";
-        audio.volume = 1.00;
-        audio.style.display = "none";
-    } else {
-        audioElement.src = "audio/halloween/fridaythe13thpart3.ogg";
-    }
-
-    audioElement.load(); 
-});
-
-  </script>
   </body>
 </html>

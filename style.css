@@ -1,9 +1,8 @@
-
 /* === GLOBAL STYLES === */
 body {
   margin: 0;
   background: #2d2d2d;
-  color: #900000;
+  color: #f9a0d5;
   font-family: 'Comic Sans MS';
   line-height: 1.5;
   overflow-x: hidden;
@@ -11,8 +10,8 @@ body {
 
 /* === HEADER BAR === */
 h1 {
-  background: rgb(22, 22, 22);
-  color: #900000;
+  background: #d878b4;
+  color: white;
   font-size: 2.2em;
   font-weight: bold;
   margin: 0;
@@ -60,7 +59,6 @@ h5 {
   margin: 6px auto;
 }
 
-
 /* === SPACING BETWEEN HEADER, TEXT, AND AUDIO === */
 .graypink > h3 {
   margin-top: 25px;
@@ -89,25 +87,25 @@ h5 {
 
 /* === SIDEBAR BOX === */
 .text {
-  background: #333333;
-  border: 3px double #5b5b5b;
+  background: #7a2b52;
+  border: 3px double #ffb4db;
   width: 340px;
   padding: 0;
-  color: #900000;
+  color: #000;
   box-sizing: border-box;
   text-align: left;
 }
 
 /* === SECTION HEADINGS INSIDE BOX === */
 .text h2 {
-  background: rgb(22, 22, 22);
-  color: #818181;
+  background: #ff66b3;
+  color: #fff;
   margin: 0;
   padding: 6px 0;
   font-weight: bold;
   font-size: 1.2em;
   text-align: center;
-  border-bottom: 3px double #3a3a3a;
+  border-bottom: 3px double #ff94cb;
   letter-spacing: 0.5px;
   position: relative;
   top: 0;
@@ -132,32 +130,32 @@ h5 {
 }
 
 .text ul a {
-  color: #f70000;
+  color: #000;
   text-decoration: none;
   font-size: 1.05em;
   line-height: 1.6;
 }
 
 .text ul a:hover {
-  color: #f78787;
+  color: #f78fcd;
 }
 
 /* === SPECIAL LINK COLORS === */
 .text a.green-link {
-  color: rgb(223, 112, 15) !important;
+  color: limegreen !important;
   font-weight: bold;
 }
 
 .text a.green-link:hover {
-  color: rgb(250, 213, 187) !important;
+  color: rgb(187, 250, 187) !important;
 }
 
 .text a.comingsoon {
-  color: #d56464 !important;
+  color: #a77a9b !important;
 }
 
 .text a.comingsoon:hover {
-  color: #ea9090 !important;
+  color: #d4aac8 !important;
 }
 
 /* === IMAGE SECTION === */
@@ -172,6 +170,8 @@ h5 {
   height: auto;
   display: block;
   border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
 }
 
 /* === QUESO MASCOT === */
@@ -184,12 +184,12 @@ h5 {
 
 /* === LINKS GENERAL === */
 a {
-  color: #f70000;
+  color: #ff24ab;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f78787;
+  color: #ffc2e9;
 }
 
 /* === RESPONSIVE ADJUSTMENTS === */
@@ -268,8 +268,4 @@ a:hover {
     width: 350px;
     margin-left: 40px;
   }
-}
-
-body {
-  background-color: rgb(0, 0, 0) !important;
 }

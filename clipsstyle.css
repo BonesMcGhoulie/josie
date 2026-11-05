@@ -6,8 +6,6 @@ body {
   max-width: 970px;
   font-family: 'Comic Sans MS';
   font-size: 90%;
-  background: #000000;
-  color: #900000;
 }
 
 body > p {
@@ -26,7 +24,7 @@ img {
 /* ===== Layout Sections ===== */
 .section {
   min-height: 248px;
-  border-bottom: 2px solid #5b5b5b;
+  border-bottom: 2px solid white;
   margin-bottom: 10px;
 }
 
@@ -52,16 +50,16 @@ img {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  background: #353535b0; /* same pink tone as Top Bloke header */
+  background: #f562bdb0; /* same pink tone as Top Bloke header */
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 999;
-  color: #c50000; /* make all header text white */
+  color: white; /* make all header text white */
   line-height: 1.1;
 }
 
 .sticky-header a {
-  color: rgb(0, 0, 0) !important; /* ensure header links are white */
+  color: white !important; /* ensure header links are white */
   text-decoration: none;
   font-weight: 700;
   font-style: italic;
@@ -70,8 +68,8 @@ img {
 /* Add this after your existing .sticky-header a:hover rules */
 .sticky-header a:hover,
 .nav-links a:hover {
-  color: rgb(0, 0, 0) !important; /* bright white like footer hover */
-  text-shadow: 0 0 6px #ffcbcb; /* same pink glow as footer */
+  color: #ffffff !important; /* bright white like footer hover */
+  text-shadow: 0 0 6px #ffcbeb; /* same pink glow as footer */
   transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
@@ -80,14 +78,14 @@ img {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: #333333; /* darker purple, distinct from body */
-  color: #900000;
+  background: #5a1e40af; /* darker purple, distinct from body */
+  color: #fff5fa; /* soft white-pink text */
   text-align: center;
   padding: 12px 0; /* slightly taller for comfort */
   font-style: italic;
   font-size: 1rem; /* independent footer text size */
   line-height: 1.4;
-  border-top: 3px double #5b5b5b;
+  border-top: 3px double #ffb4db;
   box-sizing: border-box;
   z-index: 9999;
 }
@@ -95,7 +93,7 @@ img {
 /* Footer links — their own color, size, and style */
 .sticky-footer a,
 .sticky-footer .footer-link {
-  color: #f70000 !important;
+  color: #ffd3ef !important; /* lighter pink */
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05rem; /* slightly larger than base footer text */
@@ -105,8 +103,8 @@ img {
 
 .sticky-footer a:hover,
 .sticky-footer .footer-link:hover {
-  color: #f70000 !important;
-  text-shadow: 0 0 6px #f78787; /* glow to match header color */
+  color: #ffffff !important; /* bright white */
+  text-shadow: 0 0 6px #d878b4; /* glow to match header color */
 }
 
 /* ===== Navigation ===== */
@@ -114,7 +112,7 @@ img {
   font-size: 24px;
   margin: 8px;
   flex-grow: 1;
-  color: #900000;
+  color: white; /* make "All Clips" white */
 }
 
 .nav-links {
@@ -126,7 +124,7 @@ img {
 }
 
 .nav-links a {
-  color: #f70000;
+  color: white;
   text-decoration: none;
   font-size: 18px;
   font-weight: 700;
@@ -137,7 +135,7 @@ img {
 }
 
 .nav-links a:hover {
-  color: #f78787;
+  color: #ffe0f3;
 }
 
 /* ===== Dropdown ===== */
@@ -152,10 +150,10 @@ img {
   cursor: pointer;
   line-height: 23px;
   display: inline-block;
-  background: rgba(44, 44, 44, 0.5);
-  color: rgb(0, 0, 0); /* make Jump button text white */
+  background: rgba(255, 60, 150, 0.5);
+  color: white; /* make Jump button text white */
   padding: 4px;
-  border: 3px double #d63939;
+  border: 3px double pink;
   font-weight: bold;
 }
 
@@ -166,7 +164,7 @@ img {
 /* Dropdown Content */
 .dropdown-content {
   display: none;
-  background-color: #000000;
+  background-color: #454545;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -180,8 +178,8 @@ img {
   width: 928px;
   margin-left: 8px;
   border-radius: 0;
-  border: 3px inset #d63939;
-  background: #1d1d1d9d;
+  border: 3px inset pink;
+  background: #5411679d;
   box-shadow: none;
   position: relative;
 }
@@ -212,13 +210,13 @@ img {
 
 /* ===== Inputs ===== */
 input[type="text"] {
-  background: rgba(42, 42, 42, 0.5);
-  color: rgb(187, 2, 2);
+  background: rgba(255, 60, 150, 0.5);
+  color: white;
   padding: 4px;
   margin: 20px;
   font-size: 16px;
   width: 300px;
-  outline: 3px double #d63939;
+  outline: 3px double pink;
   border: none;
   font-family: inherit;
   position: relative;
@@ -237,7 +235,7 @@ input[type="text"]::placeholder {
 .graypink {
   position: relative;
   background: rgb(52, 52, 52);
-  color: #c50000;
+  color: rgb(249, 160, 213);
 }
 
 .graypink::before {
@@ -250,11 +248,11 @@ input[type="text"]::placeholder {
 }
 
 .graypink a {
-  color: #f70000;
+  color: rgb(214, 57, 151);
 }
 
 .graypink a:hover {
-  color: rgb(247, 202, 143);
+  color: rgb(247, 143, 205);
 }
 
 /* ===== Containers ===== */
@@ -272,10 +270,10 @@ input[type="text"]::placeholder {
 .text {
   float: left;
   margin-right: 20px;
-  background: #333333;
-  border: 3px double #5b5b5b;
+  background: #852c53;
+  border: 6px double pink;
   width: 330px;
-  color: #c50000;
+  color: black;
 }
 
 .text ul {
@@ -284,7 +282,7 @@ input[type="text"]::placeholder {
 }
 
 .text ul a {
-  color: #900000;
+  color: black;
 }
 
 /* ===== Misc Elements ===== */
@@ -295,15 +293,15 @@ input[type="text"]::placeholder {
 }
 
 h1 {
-  text-shadow: 1px 1px #c50000;
+  text-shadow: 1px 1px black;
   background: transparent;
 }
 
 h2 {
-  background: rgba(41, 41, 41, 0.5);
-  color: #f70000;
+  background: rgba(255, 60, 150, 0.5);
+  color: pink;
   padding: 4px;
-  border: 3px double #5b5b5b;
+  border: 6px double pink;
   border-left: 0;
   border-right: 0;
   margin: 0;
@@ -319,8 +317,8 @@ h5 {
 }
 
 .clips p {
-  color: rgb(249, 201, 160);
-  text-shadow: 1px 2px 3px rgba(222, 125, 40, 0.6);
+  color: rgb(249, 160, 213);
+  text-shadow: 1px 2px 3px rgba(222, 40, 114, 0.6);
   font-size: 18px;
   padding: 0;
 }
@@ -391,9 +389,9 @@ h5 {
     padding: 10px 12px;
     font-size: 1rem;
     font-weight: bold;
-    border: 3px double #d63939;
-    background: rgba(46, 46, 46, 0.6);
-    color: rgb(0, 0, 0);
+    border: 3px double pink;
+    background: rgba(255, 60, 150, 0.6);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -479,8 +477,8 @@ h5 {
     padding: 10px 14px;
     font-size: 1rem;
     font-weight: bold;
-    border: 3px double #d63939;
-    background: rgba(49, 49, 49, 0.6);
+    border: 3px double pink;
+    background: rgba(255, 60, 150, 0.6);
     color: white;
     display: flex;
     align-items: center;
@@ -532,9 +530,9 @@ h5 {
 
 /* ===== Global "Jump to" Button Style (Fixed Text Color) ===== */
 .dropbtn {
-  background: #2e2e2e !important;
-  color: #f9c9a0 !important;
-  border: 3px double #d68d39 !important;
+  background: #c94c9b !important;           /* distinct pink-purple tone */
+  color: #ffffff !important;                /* force white text */
+  border: 3px double #ffb4db !important;
   border-radius: 8px;
   padding: 10px 16px !important;
   font-weight: bold;
@@ -550,204 +548,247 @@ h5 {
 /* Hover + focus states */
 .dropbtn:hover,
 .dropbtn:focus {
-  background: #2e2e2e !important;           /* lighter hover color */
-  color: #c50000 !important;
-  border-color: #f7ca8f !important;
-  box-shadow: 0 0 10px rgba(41, 41, 41, 0.6);
+  background: #e36ab9 !important;           /* lighter hover color */
+  color: #ffffff !important;
+  border-color: #ffd3ef !important;
+  box-shadow: 0 0 10px rgba(255, 192, 220, 0.7);
   transform: translateY(-1px);
 }
 
+.hell {
+    background: rgb(78, 21, 21);
+    color:rgb(223, 144, 98);
+}
+
+.hell h1,
+.hell a {
+    color:rgb(255, 51, 0);
+}
+
+.hell a:hover {
+    color:rgb(255, 142, 114);
+}
+
+.hell .sticky-header {
+    background-color: rgba(88, 72, 78, 0.8);
+}
+
+.hell .sticky-footer {
+    background-color: rgba(88, 72, 78, 0.8);
+    color:rgb(255, 51, 0);
+}
+
+.hell p {
+    color:rgb(223, 144, 98);
+}
+
+.hell .sticky-header a,
+.hell .sticky-footer a,
+.hell .sticky-footer .footer-link {
+  color:rgb(255, 51, 0) !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem; /* slightly larger than base footer text */
+  line-height: 1.0;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.hell .sticky-header a:hover,
+.hell .sticky-footer a:hover,
+.hell .sticky-footer .footer-link:hover {
+  color:rgb(255, 51, 0) !important; /* bright white */
+  text-shadow: rgb(255, 129, 75); /* glow to match header color */
+}
+
+.hell .sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #803f22af; /* darker purple, distinct from body */
+  text-align: center;
+  padding: 12px 0; /* slightly taller for comfort */
+  font-style: italic;
+  font-size: 1rem; /* independent footer text size */
+  line-height: 1.4;
+  border-top: 3px double rgb(255, 51, 0);
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.hell .sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #803f22af; /* same pink tone as Top Bloke header */
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  color: rgb(255, 51, 0); /* make all header text white */
+  line-height: 1.1;
+}
+
+.purplegold {
+    background: rgb(81, 22, 70);
+    color:rgb(244, 249, 160);
+}
+
+.purplegold h1,
+.purplegold a {
+    color:rgb(214, 211, 57);
+}
+
+.purplegold a:hover {
+    color:rgb(252, 255, 193);
+}
+
+.purplegold .sticky-header {
+    background-color: rgba(88, 72, 87, 0.8);
+}
+
+.purplegold .sticky-footer {
+    background-color: rgba(88, 72, 87, 0.8);
+    color:rgb(214, 211, 57);
+}
+
+.purplegold p {
+    color:rgb(244, 249, 160);
+}
+
+.purplegold .sticky-header a,
+.purplegold .sticky-footer a,
+.purplegold .sticky-footer .footer-link {
+    color:rgb(214, 211, 57) !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem; /* slightly larger than base footer text */
+  line-height: 1.0;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.purplegold .sticky-header a:hover,
+.purplegold .sticky-footer a:hover,
+.purplegold .sticky-footer .footer-link:hover {
+  color:rgb(214, 211, 57) !important; /* bright white */
+  text-shadow: rgb(252, 255, 193); /* glow to match header color */
+}
+
+.purplegold .sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #640e61af; /* darker purple, distinct from body */
+  text-align: center;
+  padding: 12px 0; /* slightly taller for comfort */
+  font-style: italic;
+  font-size: 1rem; /* independent footer text size */
+  line-height: 1.4;
+  border-top: 3px double rgb(214, 211, 57);
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.purplegold .sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #80227daf; /* same pink tone as Top Bloke header */
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  color: rgb(214, 211, 57); /* make all header text white */
+  line-height: 1.1;
+}
+
+.green {
+    background: rgb(33, 80, 35);
+    color:rgb(106, 223, 98);
+}
+
+.green h1,
+.green a {
+    color:rgb(1, 202, 168);
+}
+
+.green a:hover {
+    color:rgb(195, 255, 193);
+}
+
+.green .sticky-header {
+    background-color: rgba(76, 88, 72, 0.8);
+}
+
+.green .sticky-footer {
+    background-color: rgba(76, 88, 72, 0.8);
+    color:rgb(1, 202, 168);
+}
+
+.green p {
+    color:rgb(106, 223, 98);
+}
+
+.green .sticky-header a,
+.green .sticky-footer a,
+.green .sticky-footer .footer-link {
+    color:rgb(1, 202, 168) !important;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem; /* slightly larger than base footer text */
+  line-height: 1.0;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.green .sticky-header a:hover,
+.green .sticky-footer a:hover,
+.green .sticky-footer .footer-link:hover {
+    color:rgb(1, 202, 168) !important; /* bright white */
+  text-shadow: rgb(252, 255, 193); /* glow to match header color */
+}
+
+.green .sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #075509af; /* darker purple, distinct from body */
+  text-align: center;
+  padding: 12px 0; /* slightly taller for comfort */
+  font-style: italic;
+  font-size: 1rem; /* independent footer text size */
+  line-height: 1.4;
+  border-top: 3px double rgb(1, 202, 168);
+  box-sizing: border-box;
+  z-index: 9999;
+}
+
+.green .sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #228025af; /* same pink tone as Top Bloke header */
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 999;
+  color: rgb(1, 202, 168); /* make all header text white */
+  line-height: 1.1;
+}
 
 .typeslist {
   font-size: 30px;
-}
-
-body {
-  background-color: rgb(0, 0, 0) !important;
-  color: #900000;
-}
-
-/* =========================================================
-   HOMEPAGE STYLE.CSS PALETTE OVERRIDES
-   These intentionally use !important so the clip page's
-   original orange/red/gray colors cannot leak through.
-   Layout and sizing are left unchanged.
-   ========================================================= */
-
-body {
-  background: #c50000 !important;
-  color: #900000 !important;
-}
-
-.section {
-  border-bottom-color: #5b5b5b !important;
-}
-
-.sticky-header {
-  background: #f56262b0 !important;
-  color: #f70000 !important;
-}
-
-.sticky-header a,
-.sticky-header .heading,
-.nav-links a {
-  color: #c50000 !important;
-}
-
-.sticky-header a:hover,
-.nav-links a:hover {
-  color: #f78787 !important;
-  text-shadow: 0 0 6px #f78787 !important;
-}
-
-.sticky-footer {
-  background: #1b1b1baf !important;
-  color: #f70000 !important;
-  border-top-color: #f78787 !important;
-}
-
-.sticky-footer a,
-.sticky-footer .footer-link,
-.sticky-footer a:hover,
-.sticky-footer .footer-link:hover {
-  color: #f70000 !important;
-}
-
-.sticky-footer a:hover,
-.sticky-footer .footer-link:hover {
-  text-shadow: 0 0 6px #ff0000 !important;
-}
-
-.dropdown .dropbtn {
-  background: rgba(66, 66, 66, 0.5) !important;
-  color: #f70000 !important;
-  border-color: #d63939 !important;
-}
-
-.dropdown .dropbtn:hover,
-.dropdown .dropbtn:focus {
-  background: rgba(116, 116, 116, 0.5) !important;
-  color: #f70000 !important;
-  border-color: #d63939 !important;
-}
-
-.dropdown-content,
-.dropdown-content.show {
-  background: #1f1f1f9d !important;
-  border-color: #d63939 !important;
-  color: #f9a0a0 !important;
-}
-
-.dropdown-content.show::before {
-  border-bottom-color: #ab8188 !important;
-}
-
-.grid-item,
-.grid-item a {
-  color: #f70000 !important;
-}
-
-.grid-item a:hover {
-  color: #f78787 !important;
-}
-
-input[type="text"] {
-  background: rgba(42, 42, 42, 0.5) !important;
-  color: #c50000 !important;
-  outline-color: #a30101 !important;
-  border-color: transparent !important;
-}
-
-input[type="text"]::placeholder {
-  color: #c50000 !important;
-}
-
-input[type="text"]:focus {
-  outline-color: #d43a3a !important;
-}
-
-.graypink {
-  background: #343434 !important;
-  color: #c50000 !important;
-}
-
-.graypink a {
-  color: #f70000 !important;
-}
-
-.graypink a:hover {
-  color: #f78787 !important;
-}
-
-.text {
-  background: #333333 !important;
-  color: #c50000 !important;
-  border-color: #5b5b5b !important;
-}
-
-.text ul a {
-  color: #f70000 !important;
-}
-
-.text ul a:hover {
-  color: #f78787 !important;
-}
-
-h1 {
-  background: transparent !important;
-  color: #c50000 !important;
-  text-shadow: 1px 1px #000000 !important;
-}
-
-h2 {
-  background: rgba(255, 60, 60, 0.5) !important;
-  color: #f70000 !important;
-  border-color: #343434 !important;
-}
-
-.clips p {
-  color: #c50000 !important;
-  text-shadow: 1px 2px 3px rgba(222, 40, 40, 0.6) !important;
-}
-
-a {
-  color: #f70000 !important;
-}
-
-a:hover {
-  color: #f78787 !important;
-}
-
-/* Preserve the homepage's special link variants */
-.text a.green-link {
-  color: #f70000 !important;
-}
-
-.text a.green-link:hover {
-  color: #f78787 !important;
-}
-
-.text a.comingsoon {
-  color: #d56464 !important;
-}
-
-.text a.comingsoon:hover {
-  color: #ea9090 !important;
-}
-
-/* Re-assert the normal page palette over the alternate theme
-   blocks unless those classes are deliberately applied. */
-body:not(.hell):not(.purplegold):not(.green) {
-  background-color: #000000 !important;
-  color: #c50000 !important;
-}
-
-body:not(.hell):not(.purplegold):not(.green) .sticky-header {
-  background-color: #1a1a1ab0 !important;
-  color: #c50000 !important;
-}
-
-body:not(.hell):not(.purplegold):not(.green) .sticky-footer {
-  background-color: #0f0f0faf !important;
-  color: #c50000 !important;
 }
